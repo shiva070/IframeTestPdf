@@ -5,6 +5,7 @@ p1="pdf/1.pdf";
 p2="pdf/2.pdf";
 p3="pdf/3.pdf";
 p4="pdf/unityshader.pdf"
+p5="https://docs.google.com/gview?url=https://legislative.gov.in/sites/default/files/dummy-pdf_2.pdf&embedded=true";
 
 
 function doc1()
@@ -38,14 +39,13 @@ function doc3()
 function doc4()
 {  
     ChangeBg();
-    $('#iframeXD').attr('src',p4)
-//    iframe.setAttribute( 'src', p4 );
+    iframe.setAttribute( 'src', p4 );
     iframe.style.display = "block"; 
     var cla =  document.getElementById('p4') 
     cla.className +=" runtimeclr";
 }
 
-function pdf5()
+function doc5()
 {
   
     ChangeBg();
