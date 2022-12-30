@@ -4,7 +4,7 @@ var p1,p2,p3,p4,p5;
 p1="pdf/1.pdf";
 p2="pdf/2.pdf";
 p3="pdf/3.pdf";
-p4="pdf/unityshader.pdf"
+p4="pdf/unityshader.pdf#view=Fit&scrollbar=1&pagemode=thumbs&toolbar=1&navpanes=1"
 p5="https://docs.google.com/gview?url=https://legislative.gov.in/sites/default/files/dummy-pdf_2.pdf&embedded=true";
 
 
