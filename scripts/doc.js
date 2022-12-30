@@ -38,7 +38,8 @@ function doc3()
 function doc4()
 {  
     ChangeBg();
-    iframe.setAttribute( 'src', p4 );
+    $('#iframeXD').attr('src',p4)
+//    iframe.setAttribute( 'src', p4 );
     iframe.style.display = "block"; 
     var cla =  document.getElementById('p4') 
     cla.className +=" runtimeclr";
@@ -59,6 +60,7 @@ function ChangeBg()
   var cla =  document.getElementsByClassName('Btntext')
   Array.prototype.forEach.call(cla, function(cl) {
     cl.className="Btntext";
-});
+    });
 
 }
+
