@@ -1,14 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
-"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+ 
     <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 </head>
-<body onload="doc1()">
+<body>
     <section class="main-container">
         <div class="title-area">
             <p class="head-title">Pharma Medicine Room</p>
@@ -16,19 +17,20 @@
 
         <div class="navbar-area">
             <ul class="navbar">
-                <li id="p1" class="nav-item" onclick="doc1()">Evidence for Nuclear Scintigraphy</li>
-                <li id="p2" class="nav-item" onclick="doc2()">Role of Nuclear Medicine Specialist</li>
-                <li id="p3" class="nav-item" onclick="doc3()">Diagnosis ATTR-CM with Nuclear Scintigraphy</li>
+                <li id="p1" class="nav-item" onclick="displayPDF1()">Evidence for Nuclear Scintigraphy</li>
+                <li id="p2" class="nav-item" onclick="displayPDF2()">Role of Nuclear Medicine Specialist</li>
+                <li id="p3" class="nav-item" onclick="displayPDF3()">Diagnosis ATTR-CM with Nuclear Scintigraphy</li>
                 <li id="p4" class="nav-item" trusted="yes" application="yes" title="Assembly" onclick="doc4()">Unity Shader Bib</li>
                 <li id="p5" class="nav-item" onclick="doc5()">Role of Nuclear Medicine Specialist</li>
             </ul>
         </div>
 
-        <div class="iframe-area">
-            <object id="iframeXD" type="application/pdf" class="iframe"></object>
+        <div id="pdf-view-area" class="iframe-area">
+            <iframe id="iframeXD" type="application/pdf" class="iframe"></iframe>
         </div>
 
     </section>
     <script type="text/javascript" src="./scripts/doc.js"></script>
+    <script type="text/javascript" src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>    
 </body>
 </html>
