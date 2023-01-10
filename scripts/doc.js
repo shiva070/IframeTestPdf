@@ -1,7 +1,7 @@
 const iframe = document.querySelector('#iframeXD');
 var userid;
 var p1,p2,p3,p4,p5;
-p1="pdf/1.pdf";
+p1="https://5cc5-2405-201-6011-9030-152-a34c-1802-a96e.in.ngrok.io/testpdf.pdf";
 p2="pdf/testpdf.pdf";
 p3="https://legislative.gov.in/sites/default/files/dummy-pdf_2.pdf";
 p4="pdf/unityshader.pdf#zoom=100&scrollbar=1&toolbar=1&navpanes=1"
