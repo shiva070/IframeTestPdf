@@ -26,11 +26,16 @@
         </div>
 
         <div class="iframe-area">
-            <iframe id="iframeXD" type="application/pdf" class="iframe"></iframe>
+            <iframe id="iframeXD" src="" class="iframe" style="height:1000px; width:100%;"></iframe>
         </div>
 
     </section>
     <script type="text/javascript" src="./scripts/doc.js"></script>
 </body>
+<script>
+    document.getElementById("iframeXD").contentWindow.onload = function() {
+        this.document.getElementsByTagName("img")[0].style.width="100%";
+    };
+    </script>
 </html>
 
