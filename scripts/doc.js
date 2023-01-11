@@ -1,4 +1,5 @@
 const iframe = document.querySelector('#iframeXD');
+//var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 var userid;
 var p1,p2,p3,p4,p5;
 p1="https://www.appsloveworld.com/wp-content/uploads/2020/01/SamplePdf1_12mb_6pages.pdf";
@@ -21,7 +22,7 @@ function doc2()
 {
     ChangeBg();
     iframe.setAttribute( 'src', p2 );
-    iframe.style.display = "block";   
+   // iframe.style.display = "block";   
     var cla =  document.getElementById('v2') 
     cla.className +=" runtimeclr";
 }
@@ -64,6 +65,12 @@ function ChangeBg()
 
 }
 document.getElementById("iframeXD").contentWindow.onload = function() {
+    alert("hi")
 this.document.getElementsByTagName("img")[0].style.width="100%";
 }
 
+function ChangePdfStyle()
+{
+    alert("hi")
+    document.getElementById("iframeXD").document.getElementsByTagName("img")[0].style.width="100%";
+}
