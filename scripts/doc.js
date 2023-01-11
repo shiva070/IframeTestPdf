@@ -1,10 +1,10 @@
 const iframe = document.querySelector('#iframeXD');
 var userid;
 var p1,p2,p3,p4,p5;
-p1="https://5cc5-2405-201-6011-9030-152-a34c-1802-a96e.in.ngrok.io/testpdf.pdf";
-p2="pdf/testpdf.pdf";
+p1="https://www.appsloveworld.com/wp-content/uploads/2020/01/SamplePdf1_12mb_6pages.pdf";
+p2="https://www.appsloveworld.com/wp-content/uploads/2020/01/Sample-PDF-with-images.pdf";
 p3="https://legislative.gov.in/sites/default/files/dummy-pdf_2.pdf";
-p4="pdf/unityshader.pdf#zoom=100&scrollbar=1&toolbar=1&navpanes=1"
+p4="./pdf/unityshader.pdf"
 p5="https://www.appsloveworld.com/wp-content/uploads/2020/01/SAMPLE_42mb_76_Pages.pdf";
 
 
@@ -39,7 +39,7 @@ function doc3()
 function doc4()
 {  
     ChangeBg();
-    iframe.setAttribute( 'data', p4 );
+    iframe.setAttribute( 'src', p4 );
     iframe.style.display = "block"; 
     var cla =  document.getElementById('v4') 
     cla.className +=" runtimeclr";
@@ -62,5 +62,8 @@ function ChangeBg()
     cl.className="nav-item";
     });
 
+}
+document.getElementById("iframeXD").contentWindow.onload = function() {
+this.document.getElementsByTagName("img")[0].style.width="100%";
 }
 
