@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+</head>
+<body>
+    <section class="main-container">
+        <div class="title-area">
+            <p class="head-title">Charts</p>
+        </div>
+
+        <div class="navbar-area">
+            <ul class="navbar">
+                <li id="v1" onclick="button(1)"class="nav-item">Pre Filled Multi Charts</li>
+                <li id="v2" onclick="button(2)" class="nav-item">Control Sheet Data with API</li>
+                <li id="v3" onclick="button(3)" class="nav-item">Filtering with API Data Explorer</li>
+                <li id="v4" onclick="button(4)" class="nav-item">Filtering multiple charts with API</li>
+            </ul>
+        </div>
+        <div style="display: none" id="multichart"class="flourish-embed" data-src="story/1908701">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+        </div>
+        <div id="apicharts" class="iframe-area" seamless="seamless" frameborder="0">
+            <iframe id="iframe" class="iframe" src="" scrolling="auto" frameborder="0"seamless="seamless"></iframe>
+        </div>
+    </section>
+    <script>
+        const iframe = document.querySelector('#iframe');
+        const multichart = document.querySelector('#multichart');
+        const apicharts = document.querySelector('#apicharts');
+        var v2,v3,v4;
+        v2="https://api-control-sheet-demo.netlify.app/"
+        v3="https://api-filtering-multiple-charts.netlify.app/"
+        v4="https://api-filtering-data-explorer.netlify.app/"
+        function button(num)
+        {
+            switch (num) {
+                case 1:
+                multichart.style.display="block";
+                apicharts.style.display="none";
+                var cla = document.getElementById('v1')
+                cla.className += "runtimeclr";
+                    break;
+               case 2:
+                iframe.setAttribute('src',v2);
+                multichart.style.display="none";
+                apicharts.style.display="block";
+                var cla = document.getElementById('v2')
+                cla.className += "runtimeclr";
+                break;
+             case 3:
+                iframe.setAttribute('src',v3);
+                multichart.style.display="none";
+                apicharts.style.display="block";
+                var cla = document.getElementById('v3')
+                cla.className += "runtimeclr";
+                break;
+             case 4:
+                iframe.setAttribute('src',v4);
+                multichart.style.display="none";
+                apicharts.style.display="block";
+                var cla = document.getElementById('v4')
+                cla.className += "runtimeclr";
+                break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+
