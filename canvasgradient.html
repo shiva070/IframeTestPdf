@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+</head>
+<body>
+   
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+   
+<script>
+// Get the canvas element and its rendering context
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+
+// Set the center coordinates and radius of the ring
+var centerX = canvas.width / 2;
+var centerY = canvas.height / 2;
+var radius = 100;
+
+// Set the duration of the animation in milliseconds
+var duration = 2000;
+
+// Set the start and end angles in radians
+var startAngle = 0;
+var endAngle = 2 * Math.PI;
+
+// Set the animation start time
+var startTime = null;
+
+// Animate the ring
+function animate(currentTime) {
+  if (!startTime) {
+    startTime = currentTime;
+  }
+  
+  // Calculate the elapsed time since the animation started
+  var elapsedTime = currentTime - startTime;
+
+  // Calculate the progress of the animation as a value between 0 and 1
+  var progress = elapsedTime / duration;
+  progress = Math.min(progress, 1); // Limit progress to 1
+
+  // Calculate the current angle based on the progress
+  var currentAngle = startAngle + (endAngle - startAngle) * progress;
+
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Create a gradient for the stroke style
+  var gradient = ctx.createLinearGradient(centerX - radius, centerY, centerX + radius, centerY);
+  gradient.addColorStop(0, 'red');
+  gradient.addColorStop(0.5, 'green');
+  gradient.addColorStop(1, 'blue');
+
+  // Set the stroke style and line width
+  ctx.strokeStyle = gradient;
+  ctx.lineWidth = 10;
+
+  // Draw the arc with the current angle
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, radius, 0, currentAngle);
+  ctx.stroke();
+  ctx.closePath();
+
+  // Continue the animation if it's not finished
+  if (progress < 1) {
+    requestAnimationFrame(animate);
+  }
+}
+
+// Start the animation
+requestAnimationFrame(animate);
+</script>
+
+</body>
+</html>
